@@ -23,7 +23,8 @@ To run the `pavianCoreTools` script independently from the command line:
 ```sh
 git clone https://github.com/Enthusiasm23/pavianCore.git
 cd pavianCore/exec
-Rscript pavianCoreTools [options]
+chmod +x pavianCoreTools.R
+Rscript pavianCoreTools.R [options]
 ```
 
 ### Standalone Script Usage
@@ -33,16 +34,16 @@ To use the PavianCoreTools script independently, you may download it directly us
 #### Downloading and Executing with `wget`:
 
 ```sh
-wget https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools
-chmod +x pavianCoreTools
-./pavianCoreTools [options]
+wget https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools.R
+chmod +x pavianCoreTools.R
+Rscript pavianCoreTools.R [options]
 ```
 #### Downloading and Executing with `curl`:
 
 ```sh
-curl -O https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools
-chmod +x pavianCoreTools
-./pavianCoreTools [options]
+curl -O https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools.R
+chmod +x pavianCoreTools.R
+Rscript pavianCoreTools.R [options]
 ```
 #### Note: Replace [options] with any command-line arguments your script accepts.
 For detailed script usage and options, please refer to the --help parameter or view the script's documentation within the repository.
