@@ -1,9 +1,11 @@
 # Pavian and pavianCoreTools
 Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as 
 Kraken, KrakenUniq, Kraken 2, Centrifuge and MetaPhlAn. Pavian also provides an alignment viewer for validation of matches to a particular genome.
+
 For more information look at the publication at https://doi.org/10.1093/bioinformatics/btz715
 
 Pavian: interactive analysis of metagenomics data for microbiome studies and pathogen identification. FP Breitwieser, SL Salzberg - Bioinformatics, 2020
+
 Thank you for citing the publication if Pavian helps in your research :).
 
 You can try out Pavian at https://fbreitwieser.shinyapps.io/pavian/.
@@ -19,7 +21,9 @@ For detailed usage and more information on `pavianCoreTools`, visit the [pavianC
 To run the `pavianCoreTools` script independently from the command line:
 
 ```sh
-Rscript exec/pavianCoreTools [options]
+git clone https://github.com/Enthusiasm23/pavianCore.git
+cd pavianCore/exec
+Rscript pavianCoreTools [options]
 ```
 
 ### Standalone Script Usage
