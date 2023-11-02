@@ -1,15 +1,49 @@
+# Pavian and pavianCoreTools
 Pavian is a interactive browser application for analyzing and visualization metagenomics classification results from classifiers such as 
 Kraken, KrakenUniq, Kraken 2, Centrifuge and MetaPhlAn. Pavian also provides an alignment viewer for validation of matches to a particular genome.
-
 For more information look at the publication at https://doi.org/10.1093/bioinformatics/btz715
 
 Pavian: interactive analysis of metagenomics data for microbiome studies and pathogen identification. FP Breitwieser, SL Salzberg - Bioinformatics, 2020
-
 Thank you for citing the publication if Pavian helps in your research :).
 
 You can try out Pavian at https://fbreitwieser.shinyapps.io/pavian/.
 
-## Installation and deployment
+## pavianCoreTools
+
+The `pavianCoreTools` script complements the Pavian tool suite by providing a command-line interface for analyzing, organizing, and summarizing Kraken report data, facilitating the visualization and interpretation of analysis results outside the Pavian web application. This standalone script is designed for those who prefer a command-line environment or require batch processing capabilities.
+
+For detailed usage and more information on `pavianCoreTools`, visit the [pavianCore repository](https://github.com/Enthusiasm23/pavianCore).
+
+### Usage
+
+To run the `pavianCoreTools` script independently from the command line:
+
+```sh
+Rscript exec/pavianCoreTools [options]
+```
+
+### Standalone Script Usage
+
+To use the PavianCoreTools script independently, you may download it directly using `wget` or `curl` and execute it from the command line:
+
+#### Downloading and Executing with `wget`:
+
+```sh
+wget https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools
+chmod +x pavianCoreTools
+./pavianCoreTools [options]
+```
+#### Downloading and Executing with `curl`:
+
+```sh
+curl -O https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools
+chmod +x pavianCoreTools
+./pavianCoreTools [options]
+```
+#### Note: Replace [options] with any command-line arguments your script accepts.
+For detailed script usage and options, please refer to the --help parameter or view the script's documentation within the repository.
+
+## Installation and deployment (Original Pavian)
 
 Pavian is a R package, and thus requires R to run. Look [here](http://a-little-book-of-r-for-bioinformatics.readthedocs.io/en/latest/src/installr.html) for how to install R. On Windows, you probably need to install [Rtools](cran.r-project.org/bin/windows/Rtools/). On Ubuntu, install `r-base-dev`. Once you started R, the following commands will install the package:
 ```r
