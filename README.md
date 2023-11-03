@@ -34,14 +34,14 @@ To use the PavianCoreTools script independently, you may download it directly us
 #### Downloading and Executing with `wget`:
 
 ```sh
-wget https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools.R
+wget https://github.com/Enthusiasm23/pavianCore/blob/master/exec/pavianCoreTools.R
 chmod +x pavianCoreTools.R
 Rscript pavianCoreTools.R [options]
 ```
 #### Downloading and Executing with `curl`:
 
 ```sh
-curl -O https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools.R
+curl -O https://github.com/Enthusiasm23/pavianCore/blob/master/exec/pavianCoreTools.R
 chmod +x pavianCoreTools.R
 Rscript pavianCoreTools.R [options]
 ```
