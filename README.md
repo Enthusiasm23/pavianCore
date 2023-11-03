@@ -10,7 +10,7 @@ Thank you for citing the publication if Pavian helps in your research :).
 
 You can try out Pavian at https://fbreitwieser.shinyapps.io/pavian/.
 
-### pavianCoreTools Dependencies Installation
+## pavianCoreTools Dependencies Installation
 
 Before using [pavianCoreTools](exec/pavianCoreTools.R), it is essential to ensure that all its dependencies are installed. The provided script [install_pavianCoreTools_packages.R](exec/install_pavianCoreTools_packages.R) automates this process, making it easy to set up the required R packages and other software dependencies.
 
