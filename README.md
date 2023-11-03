@@ -10,6 +10,33 @@ Thank you for citing the publication if Pavian helps in your research :).
 
 You can try out Pavian at https://fbreitwieser.shinyapps.io/pavian/.
 
+### pavianCoreTools Dependencies Installation
+
+Before using [pavianCoreTools](exec/pavianCoreTools.R), it is essential to ensure that all its dependencies are installed. The provided script [install_pavianCoreTools_packages.R](exec/install_pavianCoreTools_packages.R) automates this process, making it easy to set up the required R packages and other software dependencies.
+
+#### Installation Script Usage
+To simplify the installation of dependencies for pavianCoreTools, follow the steps below:
+
+1. Download the script from the pavianCore repository:
+```sh
+wget https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/install_pavianCoreTools_packages.R
+```
+or
+```sh
+curl -O https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/install_pavianCoreTools_packages.R
+```
+2. Grant execution permission to the script:
+```sh
+chmod +x install_pavianCoreTools_packages.R
+```
+3. Execute the script to install the required dependencies:
+```sh
+Rscript install_pavianCoreTools_packages.R
+```
+#### Note:
+The script will automatically install the required R packages and other necessary software, such as PhantomJS and Pandoc.
+If you encounter issues with the installation, make sure your R version is up-to-date and you have internet connectivity.
+
 ## pavianCoreTools
 
 The `pavianCoreTools` script complements the Pavian tool suite by providing a command-line interface for analyzing, organizing, and summarizing Kraken report data, facilitating the visualization and interpretation of analysis results outside the Pavian web application. This standalone script is designed for those who prefer a command-line environment or require batch processing capabilities.
