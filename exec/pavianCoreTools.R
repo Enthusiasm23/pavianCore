@@ -5,8 +5,9 @@
 suppressPackageStartupMessages(library(tools))       # 用于文件名操作
 suppressPackageStartupMessages(library(dplyr))       # 用于数据处理
 suppressPackageStartupMessages(library(writexl))     # 用于excel文件写入
-suppressPackageStartupMessages(library(tidyverse))   # 用于tsv文件写入
+suppressPackageStartupMessages(library(readr))       # 用于tsv文件写入
 suppressPackageStartupMessages(library(purrr))       # 用于处理列表和函数
+suppressPackageStartupMessages(library(webshot))     # 用于绘制pdf文件
 suppressPackageStartupMessages(library(argparse))    # 用于处理命令行参数
 
 ################################################################################
@@ -387,6 +388,23 @@ beautify_string <- function(x) {
   x <- gsub("[\\._]"," ",x)
   x <- sub("^([[:alpha:]])", "\\U\\1", x, perl=TRUE)
   x
+}
+
+
+beautify_taxLineage <- function(x, remove_last=TRUE, break_it_up = FALSE) {
+  if (remove_last) {
+    x <- sub("(.*)\\|.*","\\1",x)
+  }
+  x <- sub("^-_root.","", x)
+  if (isTRUE(break_it_up)) {
+    x <- gsub("\\|._", "<wbr>>", x)
+  } else {
+    x <- gsub("\\|._", ">", x)
+  }
+  x %>%
+    sub("^._","", .) %>%
+    gsub(" ", "&nbsp;", .) %>%
+    gsub("-","&#x2011;", .)
 }
 
 
@@ -983,7 +1001,7 @@ sel_fungi = grepl("k_Fungi",tax_data[,"taxLineage"])  & tax_data[,"taxRank"] == 
 sel_euk = grepl("d_Eukaryota",tax_data[,"taxLineage"]) & tax_data[,"taxRank"] == 'S'
 sel_protists = grepl("d_Eukaryota",tax_data[,"taxLineage"]) & !sel_fungi &!grepl("p_Chordata",tax_data[,"taxLineage"]) & tax_data[,"taxRank"] == 'S'
 
-my_df <- data.frame(Name=tax_data$name,Max=apply(cladeReads,1,max,na.rm=TRUE),cladeReads,Lineage=pavian:::beautify_taxLineage(tax_data$taxLineage), stringsAsFactors = FALSE)
+my_df <- data.frame(Name=tax_data$name,Max=apply(cladeReads,1,max,na.rm=TRUE),cladeReads,Lineage=beautify_taxLineage(tax_data$taxLineage), stringsAsFactors = FALSE)
 
 process_data <- function(df, sel, category, limit_rows = TRUE) {
   # 筛选数据
