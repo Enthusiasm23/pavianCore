@@ -34,19 +34,23 @@ To use the PavianCoreTools script independently, you may download it directly us
 #### Downloading and Executing with `wget`:
 
 ```sh
-wget https://github.com/Enthusiasm23/pavianCore/blob/master/exec/pavianCoreTools.R
+wget https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools.R
 chmod +x pavianCoreTools.R
 Rscript pavianCoreTools.R [options]
 ```
 #### Downloading and Executing with `curl`:
 
 ```sh
-curl -O https://github.com/Enthusiasm23/pavianCore/blob/master/exec/pavianCoreTools.R
+curl -O https://raw.githubusercontent.com/Enthusiasm23/pavianCore/master/exec/pavianCoreTools.R
 chmod +x pavianCoreTools.R
 Rscript pavianCoreTools.R [options]
 ```
-#### Note: Replace [options] with any command-line arguments your script accepts.
-For detailed script usage and options, please refer to the --help parameter or view the script's documentation within the repository.
+#### Troubleshooting:
+If you encounter a "Connection refused" error when using wget or curl, please navigate to the repository at [pavianCore repository](https://github.com/Enthusiasm23/pavianCore/) and manually download the [pavianCoreTools.R](exec/pavianCoreTools.R) script from the [exec](exec) directory.
+
+#### Note: 
+Replace [options] with any command-line arguments your script accepts.
+For detailed script usage and options, please refer to the --help parameter or view the script's documentation within the [pavianCore repository](https://github.com/Enthusiasm23/pavianCore/).
 
 ## Installation and deployment (Original Pavian)
 
